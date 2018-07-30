@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 PositioningQuick
+Description: Qt PositioningQuick module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5PositioningQuick 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Quick -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -framework SystemConfiguration -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Qml -lQt5Network -L/usr/local/Qt-5.11.1/lib -lQt5Positioning -lclip2tri -lpoly2tri -lclipper -lQt5Core -lm -lqtpcre2 -framework OpenGL -framework AGL 
+Cflags: -DQT_POSITIONINGQUICK_LIB -I${includedir}/QtPositioningQuick -I${includedir}
+Requires: Qt5Quick Qt5Positioning Qt5Qml Qt5Core
+

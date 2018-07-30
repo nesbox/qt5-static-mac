@@ -1,0 +1,15 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=${prefix}/bin
+qt_config=release c++11 c++14 c++1z concurrent dbus no-pkg-config reduce_exports static stl properties animation textcodec big_codecs codecs textdate datestring doubleconversion filesystemiterator filesystemwatcher gestures itemmodel proxymodel identityproxymodel library mimetype process statemachine regularexpression settings sharedmemory sortfilterproxymodel stringlistmodel systemsemaphore temporaryfile translation xmlstream xmlstreamreader xmlstreamwriter
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5Core 
+Libs.private: -framework DiskArbitration -framework IOKit -lm -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -L/usr/local/Qt-5.11.1/lib -lqtpcre2 
+Cflags: -DQT_CORE_LIB -I${includedir}/QtCore -I${includedir}
+

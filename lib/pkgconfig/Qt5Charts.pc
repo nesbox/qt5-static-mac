@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Charts
+Description: Qt Charts module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5Charts 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Widgets -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -lz -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Core -lm -lqtpcre2 -framework OpenGL -framework AGL 
+Cflags: -DQT_CHARTS_LIB -I${includedir}/QtCharts -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets
+

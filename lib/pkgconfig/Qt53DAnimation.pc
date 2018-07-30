@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DAnimation
+Description: Qt 3DAnimation module
+Version: 5.11.1
+Libs: -L${libdir} -lQt53DAnimation 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt53DRender -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -framework SystemConfiguration -lQt5OpenGLExtensions -lQt53DCore -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Network -lQt5Concurrent -lQt5Core -lm -lqtpcre2 -framework OpenGL -framework AGL 
+Cflags: -DQT_3DANIMATION_LIB -I${includedir}/Qt3DAnimation -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore Qt53DRender
+

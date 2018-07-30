@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 MacExtras
+Description: Qt MacExtras module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5MacExtras 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Gui -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -lqtlibpng -lqtharfbuzz -lQt5Core -lm -lqtpcre2 -framework Foundation -framework AppKit -lQt5Widgets -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework CoreServices -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -lz -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Core -lm -lqtpcre2 
+Cflags: -DQT_MACEXTRAS_LIB -I${includedir}/QtMacExtras -I${includedir}
+Requires: Qt5Core Qt5Gui
+

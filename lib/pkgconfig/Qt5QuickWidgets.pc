@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 QuickWidgets
+Description: Qt QuickWidgets module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5QuickWidgets 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Quick -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -framework SystemConfiguration -lQt5Widgets -lz -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Qml -lQt5Network -lQt5Core -lm -lqtpcre2 -framework OpenGL -framework AGL 
+Cflags: -DQT_QUICKWIDGETS_LIB -I${includedir}/QtQuickWidgets -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Qml Qt5Quick Qt5Widgets
+

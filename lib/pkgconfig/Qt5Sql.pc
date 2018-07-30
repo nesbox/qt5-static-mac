@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Sql
+Description: Qt Sql module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5Sql 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Core -framework DiskArbitration -framework IOKit -lm -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -lqtpcre2  
+Cflags: -DQT_SQL_LIB -I${includedir}/QtSql -I${includedir}
+Requires: Qt5Core
+

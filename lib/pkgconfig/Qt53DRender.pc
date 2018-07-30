@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 3DRender
+Description: Qt 3DRender module
+Version: 5.11.1
+Libs: -L${libdir} -lQt53DRender 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt53DCore -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -framework SystemConfiguration -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Network -lQt5Core -lm -lqtpcre2 -lQt5OpenGLExtensions -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Concurrent -lQt5Core -lm -lqtpcre2 
+Cflags: -DQT_3DRENDER_LIB -I${includedir}/Qt3DRender -I${includedir}
+Requires: Qt5Core Qt5Gui Qt53DCore
+

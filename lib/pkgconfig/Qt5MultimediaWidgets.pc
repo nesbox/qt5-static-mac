@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 MultimediaWidgets
+Description: Qt MultimediaWidgets module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5MultimediaWidgets 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Multimedia -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework SystemConfiguration -framework CoreGraphics -framework OpenGL -framework AGL -lQt5Widgets -lz -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Network -lQt5Core -lm -lqtpcre2 -lQt5OpenGL -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -lQt5Widgets -lz -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Core -lm -lqtpcre2 
+Cflags: -DQT_MULTIMEDIAWIDGETS_LIB -I${includedir}/QtMultimediaWidgets -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Multimedia Qt5Widgets
+

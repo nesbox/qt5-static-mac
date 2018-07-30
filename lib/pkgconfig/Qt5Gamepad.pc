@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Gamepad
+Description: Qt Gamepad module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5Gamepad 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Gui -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -lqtlibpng -lqtharfbuzz -lQt5Core -lm -lqtpcre2 -framework OpenGL -framework AGL 
+Cflags: -DQT_GAMEPAD_LIB -I${includedir}/QtGamepad -I${includedir}
+Requires: Qt5Core Qt5Gui
+

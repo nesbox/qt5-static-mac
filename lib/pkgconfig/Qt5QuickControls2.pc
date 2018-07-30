@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 QuickControls2
+Description: Qt QuickControls2 module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5QuickControls2 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Quick -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -framework SystemConfiguration -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Qml -lQt5Network -lQt5Core -lm -lqtpcre2 -L/usr/local/Qt-5.11.1/lib -lQt5QuickTemplates2 -L/usr/local/Qt-5.11.1/lib -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -framework SystemConfiguration -lQt5Quick -lQt5Gui -lqtlibpng -lqtharfbuzz -lQt5Qml -lQt5Network -lQt5Core -lm -lqtpcre2 
+Cflags: -DQT_QUICKCONTROLS2_LIB -I${includedir}/QtQuickControls2 -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Quick
+

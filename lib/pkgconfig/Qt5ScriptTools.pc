@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 ScriptTools
+Description: Qt ScriptTools module
+Version: 5.11.1
+Libs: -L${libdir} -lQt5ScriptTools 
+Libs.private: -L/usr/local/Qt-5.11.1/lib -lQt5Core -framework DiskArbitration -framework IOKit -lm -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -lqtpcre2 -lQt5Widgets -L/usr/local/Qt-5.11.1/lib -framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework CoreGraphics -framework OpenGL -framework AGL -lz -lQt5Gui -lqtlibpng -lqtharfbuzz -L/usr/local/Qt-5.11.1/lib -lQt5Script -lQt5Core -lm -lqtpcre2 
+Cflags: -DQT_SCRIPTTOOLS_LIB -I${includedir}/QtScriptTools -I${includedir}
+Requires: Qt5Core
+

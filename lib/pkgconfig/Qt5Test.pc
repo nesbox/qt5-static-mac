@@ -1,0 +1,14 @@
+prefix=/usr/local/Qt-5.11.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Test
+Description: Qt Unit Testing Library
+Version: 5.11.1
+Libs: -L${libdir} -lQt5Test 
+Libs.private: -framework Security -framework Foundation -framework ApplicationServices -framework IOKit -L/usr/local/Qt-5.11.1/lib -lQt5Core -framework DiskArbitration -lm -framework CoreServices -framework AppKit -framework CoreFoundation -lqtpcre2  
+Cflags: -DQT_TESTLIB_LIB -I${includedir}/QtTest -I${includedir}
+Requires: Qt5Core
+
